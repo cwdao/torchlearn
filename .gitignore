@@ -1,0 +1,22 @@
+# matlab file
+*.mat
+*.asv
+# numpy file
+*.npy
+# doc file
+*.zip
+*.docx
+*.pdf
+*.png
+*.js
+# pytorch file
+*.pth
+*.gv
+# personal runtime logs
+src/__pycache__
+src/utils/__pycache__
+src/vislog
+src/vislog_ndata
+src/model
+src/ckp
+src/vislog_1
