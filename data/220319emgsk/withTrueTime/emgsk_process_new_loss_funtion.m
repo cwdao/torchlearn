@@ -1,16 +1,23 @@
 clear;
 clc;
-load('redacted_GIL01_Free4.mat');
+% load('redacted_GIL01_Free4.mat');
+
+load('redacted_GIL03_Free4.mat');
 
 %% 
 
-% cyc = Gait{:,1};
-% time = Gait{:,2};
-% emg_rf_l = Gait{:,3};
-% emg_lh_l = Gait{:,4};
-% mf_rf_l = Gait{:,5};
-% mf_bm_l = Gait{:,6};
-% ka_l = Gait{:,8};
+cyc = Gait{:,1};
+time = Gait{:,2};
+emg_rf_l = Gait{:,3};
+emg_lh_l = Gait{:,4};
+mf_rf_l = Gait{:,5};
+mf_bm_l = Gait{:,6};
+ka_l = Gait{:,8};
+%% 
+DataPathandName =...
+    strcat('EMGSKdata-220426_s3f4.mat' );
+save(DataPathandName,'cyc','time','emg_rf_l','emg_lh_l','mf_rf_l',...
+    'mf_bm_l','ka_l');
 
 %% 不用的数据数据删除
 Gait(:,{'LKneeMoment'})=[];

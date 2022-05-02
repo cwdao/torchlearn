@@ -1,6 +1,7 @@
 # matlab file
 *.mat
 *.asv
+*.fig
 # numpy file
 *.npy
 # doc file

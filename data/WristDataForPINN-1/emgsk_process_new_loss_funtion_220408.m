@@ -1,6 +1,8 @@
 clear;
 clc;
-load('./S1/redact_S1_WFE_T1.mat');
+load('./redact_S4_WFE_T1-new.mat');
+% load('./redact_S4_WFE_T2-new.mat');
+% load('redact_S4_WFE_T1.mat');
 
 %% 
 % 本次数据开头处有部分变量法值缺失，因此选择从第12行开始；同时角度和时间有前面的
@@ -53,23 +55,50 @@ for i=1:101
 end
 %% 
 
-time = data{:,1};
-fcr = data{:,2};
-fcu = data{:,3};
-ecrl = data{:,4};
-ecrb = data{:,5};
-ecu = data{:,6};
-angle = data{:,7};
-mf_fcr = data{:,8};
-mf_fcu = data{:,9};
-mf_ecrl = data{:,10};
-mf_ecrb = data{:,11};
-mf_ecu = data{:,12};
+% time = data{:,1};
+% fcr = data{:,2};
+% fcu = data{:,3};
+% ecrl = data{:,4};
+% ecrb = data{:,5};
+% ecu = data{:,6};
+% angle = data{:,7};
+% mf_fcr = data{:,8};
+% mf_fcu = data{:,9};
+% mf_ecrl = data{:,10};
+% mf_ecrb = data{:,11};
+% mf_ecu = data{:,12};
+time = data{:,1}(1:2000);
+fcr = data{:,2}(1:2000);
+fcu = data{:,3}(1:2000);
+ecrl = data{:,4}(1:2000);
+ecrb = data{:,5}(1:2000);
+ecu = data{:,6}(1:2000);
+angle = data{:,7}(1:2000);
+mf_fcr = data{:,8}(1:2000);
+mf_fcu = data{:,9}(1:2000);
+mf_ecrl = data{:,10}(1:2000);
+mf_ecrb = data{:,11}(1:2000);
+mf_ecu = data{:,12}(1:2000);
+
 
 %%
+sample  = 1800;
+fcr = resample(fcr, sample, 2000);
+time = resample(time, sample, 2000);
+ecu = resample(ecu, sample, 2000);
+fcu = resample(fcu, sample, 2000);
+ecrl = resample(ecrl, sample, 2000);
+ecrb = resample(ecrb, sample, 2000);
+mf_fcr = resample(mf_fcr, sample, 2000);
+mf_fcu = resample(mf_fcu, sample, 2000);
+mf_ecrl = resample(mf_ecrl, sample, 2000);
+mf_ecrb = resample(mf_ecrb, sample, 2000);
+mf_ecu = resample(mf_ecu, sample, 2000);
+angle = resample(angle, sample, 2000);
+%% 
 
 DataPathandName =...
-    strcat('EMGSKdata-220409.mat' );
+    strcat('EMGSKdata-220426-s4t2-slim_2000.mat' );
 save(DataPathandName,'time','fcr','fcu','ecrl',...
     'ecrb','ecu','angle','mf_fcr'...
     ,'mf_fcu','mf_ecrl','mf_ecrb','mf_ecu');
