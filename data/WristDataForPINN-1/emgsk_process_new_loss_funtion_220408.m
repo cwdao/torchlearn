@@ -1,9 +1,9 @@
 clear;
 clc;
-load('./redact_S4_WFE_T1-new.mat');
+% load('./redact_S4_WFE_T1-new.mat');
 % load('./redact_S4_WFE_T2-new.mat');
 % load('redact_S4_WFE_T1.mat');
-
+load('./S1/redact_S1_WFE_T1.mat');
 %% 
 % 本次数据开头处有部分变量法值缺失，因此选择从第12行开始；同时角度和时间有前面的
 % 缓冲，速度和加速度可以覆盖完整
