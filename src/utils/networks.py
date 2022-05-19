@@ -3,11 +3,12 @@
 #####################################################
 
 import numpy as np
+import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import torch 
 import torchvision.transforms as transforms
 from torch.utils.data import Dataset
+
 
 #####################################################
 # for Ninapro db1 10ch data
