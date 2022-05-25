@@ -13,6 +13,10 @@
 # pytorch file
 *.pth
 *.gv
+# others
+.ipynb_checkpoints/
+.idea/
+./vscode
 # personal runtime logs
 src/__pycache__
 src/utils/__pycache__
