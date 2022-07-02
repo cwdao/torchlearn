@@ -1,3 +1,4 @@
+from markdown import markdown
 import torch as th
 import tensorflow as tf
 import datetime as dt
@@ -12,4 +13,11 @@ print(th.rand(2,2).cuda())
 d = dt.date(year = 2021, month = 1, day = 1)
 print(d.month)
 print(d.strftime('%Y %m%d'))
-plt.plot([4,2,3,7,1])
+plt.plot([4,2,3,37,1])
+#%%
+%%markdown
+# try
+#%% [markdown]
+# NEW function test
+
+# %%
